@@ -1,1 +1,160 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=importmap-type content=systemjs-importmap><link rel=apple-touch-icon sizes=180x180 href=./apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=./favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=./favicon-16x16.png><link rel=mask-icon href=./safari-pinned-tab.svg color=#f5f5f2><link rel="shortcut icon" href=./favicon.ico><link rel=stylesheet type=text/css href=/ui/webapp/css/vendorStyles.css><link rel=stylesheet type=text/css href=/ui/webapp/css/application.css><script type=systemjs-importmap src=/ui/imports-map/imports.json></script><script src=/ui/externals/import-map-overrides/dist/import-map-overrides.js></script><script src=/ui/externals/systemjs/dist/system.min.js></script><script src=/ui/externals/systemjs/dist/extras/amd.min.js></script><script src=/ui/externals/systemjs/dist/extras/named-exports.min.js></script><link rel=preload href=/ui/externals/vue/dist/vue.min.js as=script><link rel=preload href=/ui/externals/vue-router/dist/vue-router.min.js as=script><link rel=preload href=/ui/externals/jfrog-ui-essentials/dist/jfrog-ui-essentials.umd.min.js as=script><link rel=preload href=/ui/externals/single-spa/lib/umd/single-spa.min.js as=script><base href=/ui/ ><title>JFrog</title><style>@keyframes heartbeatOut{from{opacity:1}50%{opacity:0;transform:scale(.8)}to{opacity:0;transform:scale(.8)}}@keyframes heartbeat{from{transform:scale3d(1,1,1)}50%{transform:scale3d(1.15,1.15,1.15)}to{transform:scale3d(1,1,1)}}.pounding-heart-container{display:none;align-items:center;justify-content:center;position:absolute;left:0;right:0;top:0;bottom:0;z-index:9999999999;background:linear-gradient(132.49deg,#414857 14.17%,#252831 83.36%)}.pounding-heart-container.show-splash{display:flex}.logo{width:130px;-webkit-backface-visibility:hidden;-ms-transform:translateZ(0);-webkit-transform:translateZ(0);transform:translateZ(0)}.logo.pulse{animation:heartbeat 1.7s infinite}.logo.zoom-out{animation:heartbeatOut 150ms forwards}</style><link href=/ui/css/app.c96d5900.css rel=preload as=style><link href=/ui/css/chunk-vendors.d66041d0.css rel=preload as=style><link href=/ui/js/app.468a9475.js rel=preload as=script><link href=/ui/js/chunk-vendors.16fbc628.js rel=preload as=script><link href=/ui/js/preloader.948ab2a1.js rel=preload as=script><link href=/ui/css/chunk-vendors.d66041d0.css rel=stylesheet><link href=/ui/css/app.c96d5900.css rel=stylesheet></head><body><div class="pounding-heart-container show-splash"><img class="logo pulse" src=/ui/img/jfrog.8f770bff.svg></div><noscript><strong>We're sorry but jfrog webapp doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=/ui/js/chunk-vendors.16fbc628.js></script><script src=/ui/js/app.468a9475.js></script><script src=/ui/js/preloader.948ab2a1.js></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amit Verma — Lead Software Engineer | Go, Performance & Access Networks</title>
+  <meta name="description" content="9+ years building telecom microservices. 1:1 sessions on Go, performance, software design, and broadband access networks." />
+  <style>
+    :root {
+      --bg: #0f1419;
+      --card: #1a2332;
+      --text: #e7ecf3;
+      --muted: #9aa8bc;
+      --accent: #3d9cf0;
+      --accent-dim: #2a6fad;
+      --border: #2a3544;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+    header { margin-bottom: 2.5rem; }
+    .eyebrow { color: var(--accent); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.4rem; }
+    .tagline { color: var(--muted); font-size: 1.05rem; }
+    .links { display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; margin-top: 1rem; font-size: 0.95rem; }
+    section { margin-bottom: 2.25rem; }
+    h2 { font-size: 1.15rem; margin-bottom: 0.75rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+    p { color: var(--muted); margin-bottom: 0.75rem; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.35rem;
+      margin-bottom: 0.85rem;
+    }
+    .card h3 { font-size: 1rem; margin-bottom: 0.35rem; }
+    .card p { margin-bottom: 0; font-size: 0.95rem; }
+    .meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 0.5rem; }
+    ul { color: var(--muted); padding-left: 1.15rem; }
+    li { margin-bottom: 0.35rem; }
+    .skills { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+    .skill {
+      background: #243044;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.25rem 0.7rem;
+      font-size: 0.8rem;
+      color: var(--text);
+    }
+    .cta {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff !important;
+      font-weight: 600;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      margin-top: 0.5rem;
+      text-decoration: none !important;
+    }
+    .cta:hover { background: var(--accent-dim); }
+    .note { font-size: 0.85rem; color: var(--muted); margin-top: 0.75rem; }
+    footer { margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="eyebrow">Bangalore · Lead Software Engineer</div>
+      <h1>Amit Verma</h1>
+      <p class="tagline">9+ years building broadband access networks &amp; Go microservices. 1:1 sessions on Go, performance, software design, and access networks.</p>
+      <div class="links">
+        <a href="mailto:amitverma098@gmail.com">amitverma098@gmail.com</a>
+        <a href="https://linkedin.com/in/amit-verma-45159a84" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="tel:+917485013982">+91 74850 13982</a>
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>Lead Engineer at Radisys on Deutsche Telekom’s Access 4.0 SDN broadband platform — Go microservices, Kubernetes, and FTTH systems serving millions of customers at 99.9% SLA. Earlier: payments backend at Aya Care; systems engineering on Avis Budget Group and Sainsbury’s programs. B.Tech ECE, NIT Rourkela.</p>
+      <div class="skills" aria-label="Skills">
+        <span class="skill">Go</span>
+        <span class="skill">Python</span>
+        <span class="skill">Kubernetes</span>
+        <span class="skill">Docker / Helm</span>
+        <span class="skill">Microservices</span>
+        <span class="skill">AWS</span>
+        <span class="skill">PostgreSQL</span>
+        <span class="skill">SDN / FTTH</span>
+        <span class="skill">CI/CD</span>
+      </div>
+    </section>
+
+    <section id="work">
+      <h2>Selected work</h2>
+      <div class="card">
+        <h3>Radisys · Lead Engineer</h3>
+        <div class="meta">Jul 2022 – Present · Deutsche Telekom Access 4.0</div>
+        <ul>
+          <li>Led microservices design for SDN broadband access serving millions of FTTH customers</li>
+          <li>Go services for high-throughput QoS / policy updates with sub-100ms response targets</li>
+          <li>Docker + Kubernetes + Helm; 95% test coverage; ~40% latency improvement on critical paths</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Aya Care · Software Engineer</h3>
+        <div class="meta">Feb 2022 – Jun 2022</div>
+        <ul>
+          <li>Go payment-gateway backends; AWS; PostgreSQL optimization for high throughput</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Systems Engineer · Avis Budget Group &amp; Sainsbury’s</h3>
+        <div class="meta">Mar 2017 – Feb 2022 · Client programs</div>
+        <ul>
+          <li>Enterprise systems, QA, and production support on programs for Avis Budget Group and Sainsbury’s</li>
+          <li>Debugged production issues and process improvements — ~30% downtime reduction on supported platforms</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="sessions">
+      <h2>1:1 sessions</h2>
+      <p>Practical help from production experience — not cert prep. Bring a slow service, a design you’re stuck on, or a topic you want taught clearly.</p>
+      <div class="card">
+        <h3>What we cover</h3>
+        <ul>
+          <li><strong>Performance</strong> — find bottlenecks, tune Go services, latency and throughput under real load</li>
+          <li><strong>Software design</strong> — greenfield or refactor: APIs, microservices boundaries, reliability patterns</li>
+          <li><strong>Go deep-dives</strong> — concurrency, testing, production habits for backend engineers</li>
+          <li><strong>Access networks education</strong> — FTTH / GPON / SDN concepts explained for engineers shipping software on broadband platforms</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Format</h3>
+        <p>60-minute video call · screen-share · follow-up notes. Pricing and calendar link go here once you pick them.</p>
+        <a class="cta" href="mailto:amitverma098@gmail.com?subject=1%3A1%20session%20with%20Amit%20Verma">Book a session</a>
+        <p class="note">Replace this button with Calendly + Razorpay when you’re ready to take payments.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact / opportunities</h2>
+      <p>Open to interesting Lead / Staff backend roles and consulting. Email is the fastest path.</p>
+      <a class="cta" href="mailto:amitverma098@gmail.com">Email Amit</a>
+    </section>
+
+    <footer>
+      © 2026 Amit Verma · Bangalore, India · Draft v1 (9+ years experience)
+    </footer>
+  </div>
+</body>
+</html>
